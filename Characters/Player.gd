@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const SPEED := 600
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float):
 	var velocity := Vector2()
 	
 	if (Input.is_action_pressed("left")):
@@ -16,6 +16,6 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_collide(velocity * delta)
 	
-func _unhandled_key_input(event: InputEventKey) -> void:
+func _unhandled_key_input(event: InputEventKey):
 	if (event.is_action_pressed("shoot")):
 		$LaserWeapon.shoot()

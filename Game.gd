@@ -1,6 +1,6 @@
 extends Node2D
 
-func _ready() -> void:
+func _ready():
 	connect("resized", self, "call_wrap_around")
 
 func call_wrap_around():
