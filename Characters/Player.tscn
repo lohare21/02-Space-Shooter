@@ -6,8 +6,13 @@
 [ext_resource path="res://LaserWeapon.tscn" type="PackedScene" id=4]
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 526.307, 531.955 )
+position = Vector2( 542.78, 572.718 )
+scale = Vector2( 0.4, 0.4 )
+collision_mask = 6
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

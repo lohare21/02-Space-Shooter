@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var is_exploded := false
+var is_exploded = false
 
 func explode(): 
 	if is_exploded:
@@ -10,3 +10,5 @@ func explode():
 	
 	get_parent().remove_child(self)
 	queue_free()
+
+

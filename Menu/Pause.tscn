@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Asset/edge-of-the-galaxy-font (1)/EdgeOfTheGalaxyPoster-3zRAp.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu/Pause.gd" type="Script" id=2]
+[ext_resource path="res://Asset/Backgrounds/1_r3Q7bGi9pDOJL0Iw2wdp3g.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 160
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[node name="Pause" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -26.6969
+margin_top = -21.3574
+margin_right = 1123.3
+margin_bottom = 842.643
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 376.756
+margin_top = 22.0609
+margin_right = 681.756
+margin_bottom = 216.061
+custom_fonts/font = SubResource( 2 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 318.0
+margin_top = 194.0
+margin_right = 754.0
+margin_bottom = 290.0
+rect_pivot_offset = Vector2( -1538.79, -100.216 )
+custom_fonts/font = SubResource( 3 )
+text = "Continue"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 318.49
+margin_top = 317.816
+margin_right = 754.49
+margin_bottom = 402.816
+custom_fonts/font = SubResource( 4 )
+text = "Menu"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 316.303
+margin_top = 435.643
+margin_right = 755.303
+margin_bottom = 518.643
+custom_fonts/font = SubResource( 1 )
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
