@@ -19,3 +19,5 @@ polygon = PoolVector2Array( 27.5, -39.6, 27.5, -37.7, 51.5, -9.1, 51.5, 9.8, 42.
 [node name="Shoot" type="Timer" parent="."]
 
 [node name="Move" type="Timer" parent="."]
+
+[connection signal="timeout" from="Shoot" to="." method="_on_Shoot_timeout"]
